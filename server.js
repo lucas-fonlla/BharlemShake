@@ -30,6 +30,7 @@ var Product = require('./models/product');
 
 var router = express.Router();
 
+//users
 router.route("/users")
 
     .post(function (req, res) {
@@ -53,6 +54,7 @@ router.route("/users")
         });
     });
 
+//auth
 app.post('/authenticate', function(req, res) {
     User.findOne({username: req.body.username, password: req.body.password}, function(err, user) {
         if (err) {
