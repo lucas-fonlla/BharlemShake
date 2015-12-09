@@ -1,0 +1,571 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"c",
+				"class	Attr"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"angular",
+				"angular-ui-bootstrap"
+			],
+			[
+				"services",
+				"servicesProviders"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"margi",
+				"margin-right"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"border",
+				"border-top"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"bo",
+				"border-top"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"fon",
+				"font-style"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"a",
+				"abbr	Tag"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"sess",
+				"session"
+			],
+			[
+				"body",
+				"bodyParser"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"dire",
+				"direBye"
+			],
+			[
+				"clo",
+				"close"
+			],
+			[
+				"pa",
+				"parse"
+			],
+			[
+				"Ability",
+				"Ability4"
+			],
+			[
+				"Getabil",
+				"GetAbilityType	No Description Set"
+			],
+			[
+				"form",
+				"formless_tertius"
+			],
+			[
+				"Attri",
+				"AttributePrimary"
+			],
+			[
+				"ol",
+				"old_ability_1_lvl"
+			],
+			[
+				"GetAbility",
+				"GetAbilityName	No Description Set"
+			],
+			[
+				"Has",
+				"HasAbility	See whether this unit has an ability by name."
+			],
+			[
+				"new",
+				"new_ability"
+			],
+			[
+				"unu",
+				"unus_lvl"
+			],
+			[
+				"GetAbili",
+				"GetAbilityCount	No Description Set"
+			],
+			[
+				"Remove",
+				"RemoveAbility	Remove an ability from this unit by name."
+			],
+			[
+				"GetAbiilty",
+				"GetAbilityName	No Description Set"
+			],
+			[
+				"GetAbi",
+				"GetAbilityByIndex	Retrieve an ability by index from the unit."
+			],
+			[
+				"GetI",
+				"GetIntAttr	Get Integer Attribute"
+			],
+			[
+				"OnSpe",
+				"OnSpellStart	Finished Cast Point"
+			],
+			[
+				"GetGa",
+				"GetGameModeEntity	Get the game mode entity"
+			],
+			[
+				"Gam",
+				"GameRules"
+			],
+			[
+				"Abili",
+				"AbilityDamage"
+			],
+			[
+				"Abil",
+				"AbilityDamage"
+			],
+			[
+				"OnS",
+				"OnSpellStart	Finished Cast Point"
+			],
+			[
+				"Abi",
+				"AbilityBehavior	Team Type"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 409.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: html"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"do",
+				"Set Syntax: JavaDoc"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 703.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Lucas/workspace/BharlennShake"
+	],
+	"file_history":
+	[
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/pages/modalLogin.html",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/style.css",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/controller/connexion.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/controller/modal.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/pages/profile.html",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/controller/profile.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/controller/home.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/js/main.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/controller/map.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/pages/modalContact.html",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/index.html",
+		"/C/Users/Lucas/workspace/BharlemShake/README.md",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/package.json",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/controller/dropdown.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/pages/dropdown.html",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/pages/dropdown.css",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/pages/modalAbout.html",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/pages/home.html",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/app/pages/profile.html",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/app/pages/home.html",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/app/controller/home.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/app/controller/modal.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/app/controller/connexion.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/app/js/main.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/app/style.css",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/app/pages/modalAbout.html",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/app/index.html",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/app/pages/modalContact.html",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/app/pages/contactPopup.html",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/app/main.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/server.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/gulpfile.js",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/gulpfile.js",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/templates/header.html",
+		"/C/Users/Lucas/workspace/BNP/fonlla_l/node_modules/index.html",
+		"/C/Users/Lucas/workspace/BNP/startbootstrap-modern-business-1.0.4/startbootstrap-modern-business-1.0.4/index.html",
+		"/C/Users/Lucas/workspace/BNP/startbootstrap-modern-business-1.0.4/startbootstrap-modern-business-1.0.4/template/header.html",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/partials/servicePopup.html",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/partials/newServicePopup.html",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/js/controllers/notifications.js",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/data/services.json",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/js/controllers/services_finder.js",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/partials/profilePopup.html",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/index.html",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/js/controllers/map.js",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/js/services/scoring.js",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/scripts/main.js",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/js/services/geojson.js",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/data/profiles.json",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/data/current_user.json",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/data/sport_center.json",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/data/bar.json",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/data/emergency.json",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/data/historic.json",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/data/cinema.json",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/data/restaurant.json",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/data/museum.json",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/data/shop.json",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/node_modules/query-overpass/package.json",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/scripts/test.js",
+		"/C/Users/Lucas/workspace/InDaSTRiiT/app/scripts/facebook-jssdk.js",
+		"/C/Users/Lucas/Desktop/Archive2/jopacity/jopacity.css",
+		"/C/Users/Lucas/Desktop/Archive2/jopacity/jopacity.html",
+		"/C/Users/Lucas/Desktop/Archive2/jopacity/jopacity.js",
+		"/C/Users/Lucas/Desktop/Archive/QUESTS/form.html",
+		"/C/Users/Lucas/Desktop/Archive/css3/styles.css",
+		"/C/Users/Lucas/Desktop/Archive/calculatrice/calc.html",
+		"/C/Users/Lucas/Desktop/Archive/Date/date.html",
+		"/C/Users/Lucas/Desktop/Archive2/Date/date.html",
+		"/C/Users/Lucas/Desktop/Archive2/jform/jform.css",
+		"/C/Users/Lucas/Desktop/Archive2/jform/jform.html",
+		"/C/Users/Lucas/Desktop/Archive2/jform/jform.js",
+		"/C/Users/Lucas/Desktop/Archive2/jtable/jtable.css",
+		"/C/Users/Lucas/Desktop/Archive2/jtable/jtable.html",
+		"/C/Users/Lucas/Desktop/Archive2/jtable/jtable.js",
+		"/C/Users/Lucas/Desktop/Archive2/jbutton/jbutton.css",
+		"/C/Users/Lucas/Desktop/Archive2/jbutton/jbutton.html",
+		"/C/Users/Lucas/Desktop/Archive2/jbutton/jbutton.js",
+		"/C/Users/Lucas/Desktop/Archive/jbutton/jbutton.html",
+		"/C/Users/Lucas/Desktop/Archive2/Date/date.js",
+		"/C/Users/Lucas/Desktop/Archive/Date/date.css",
+		"/C/Users/Lucas/Desktop/Archive/calculatrice/calc.js",
+		"/C/Users/Lucas/Desktop/Archive/citation/citation.html",
+		"/C/Users/Lucas/Desktop/Archive/citation/citation.js",
+		"/C/Users/Lucas/Desktop/Archive/css3/css3.html",
+		"/C/Users/Lucas/Desktop/Archive/QUESTS/test.html",
+		"/C/Users/Lucas/AppData/Roaming/Sublime Text 3/Packages/User/html-html5skel.sublime-snippet",
+		"/C/Users/Lucas/Desktop/Archive/QUESTS/ie.html",
+		"/C/Users/Lucas/Desktop/Archive/QUESTS/style.html",
+		"/C/Users/Lucas/AppData/Roaming/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/Lucas/AppData/Roaming/Sublime Text 3/Packages/User/HTML.sublime-settings",
+		"/C/Users/Lucas/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/Lucas/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Lucas/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Lucas/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Lucas/Desktop/Archive/QUESTS/table.html",
+		"/C/Users/Lucas/Desktop/prepintra/js/prepintra-components.js",
+		"/C/Users/Lucas/Desktop/prepintra/js/prepintra.js",
+		"/D/dev Node/test/public/index.html",
+		"/D/dev Node/test/app/routes.js",
+		"/D/dev Node/One-page app/public/index.html",
+		"/D/dev Node/One-page app/public/core.js",
+		"/D/dev Node/One-page app/public/js/services/todos.js",
+		"/D/dev Node/One-page app/public/js/controllers/main.js",
+		"/D/dev Node/angular_test/index.html",
+		"/D/dev Node/test/Gruntfile.js",
+		"/D/dev Node/test/package.json",
+		"/D/dev Node/chifumi/public/index.html",
+		"/D/dev Node/chifumi/server.js",
+		"/D/dev Node/chifumi/app/routes.js",
+		"/D/dev Node/One-page app/server.js",
+		"/D/dev Node/One-page app/app/models/todo.js",
+		"/D/dev Node/One-page app/app/routes.js",
+		"/D/dev Node/One-page app/config/database.js",
+		"/C/Users/Lucas/Desktop/dev Node/One-page app/public/core.js",
+		"/C/Users/Lucas/Desktop/dev Node/One-page app/public/index.html",
+		"/C/Users/Lucas/Desktop/dev Node/One-page app/package.json",
+		"/C/Users/Lucas/Desktop/dev Node/One-page app/server.js",
+		"/C/Users/Lucas/Desktop/dev Node/site_test/demo-express/app.js",
+		"/C/Users/Lucas/Desktop/dev Node/site_test/app.js",
+		"/C/Users/Lucas/Desktop/dev Node.js/serveur.js",
+		"/C/Users/Lucas/Desktop/dev Node.js/views/todo.ejs",
+		"/C/Users/Lucas/Desktop/dev Node.js/test.js",
+		"/C/Users/Lucas/Desktop/dev Node.js/views/accueil.ejs",
+		"/C/Users/Lucas/Desktop/dev Node.js/monmodule.js",
+		"/C/Users/Lucas/Desktop/dev Node.js/app.js",
+		"/C/Users/Lucas/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Lucas/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript.sublime-settings"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"h4",
+			");\n",
+			"modalController",
+			"mypoSition",
+			"my_widget",
+			";",
+			"listen"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"ScoringFactory",
+			";\\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "sublim-barlenn.sublime-project",
+	"replace":
+	{
+		"height": 80.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 337.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

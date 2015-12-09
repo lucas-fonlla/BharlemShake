@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 
-mongoose.connect('mongodb://10.104.14.112/bharlemshake');
+mongoose.connect('mongodb://10.104.14.112/bharlennshake');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
