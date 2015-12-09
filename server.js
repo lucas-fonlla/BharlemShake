@@ -80,11 +80,11 @@ app.post('/authenticate', function(req, res) {
 });
 
 //products
-router.route("/products/:tamere")
+router.route("/products/:product_id")
 
     .get(function (req, res)
     {
-        var id = req.params.tamere;
+        var id = req.params.product_id;
         Product.findById(id, function(err, product)
         {
             if (err)
