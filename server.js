@@ -45,11 +45,11 @@ router.route("/users")
         });
     })
     .get(function (req, res) {
-       User.find(function (err, bears) {
+       User.find(function (err, users) {
             if (err)
                 res.send(err);
 
-            res.json(bears);
+            res.json(users);
         });
     });
 
@@ -108,13 +108,13 @@ router.route("/products")
             res.json({message : "Product created !"});
         });
     })
-    
+
     .get(function (req, res) {
-       Product.find(function (err, bears) {
+       Product.find(function (err, products) {
             if (err)
                 res.send(err);
 
-            res.json(bears);
+            res.json(products);
         });
     });
 
