@@ -1,0 +1,19 @@
+<md-dialog aria-label="{{product.name}}" ng-cloak>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <span>Aperçu</span>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon class="material-icons" aria-label="Close dialog">close</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content layout="row" layout-wrap layout-align="center start">
+      <div class="md-dialog-content">
+        <h6>{{product.name}}</h6>
+        <img ng-src="{{product.img}}" alt="{{product.name}}">
+      </div>
+    </md-dialog-content>
+  </form>
+</md-dialog>

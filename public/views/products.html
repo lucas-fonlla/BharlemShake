@@ -1,0 +1,37 @@
+<md-list ng-controller="ProductListCtrl" layout-align="center center" layout-padding layout-margin ng-cloak>
+  <md-subheader class="md-no-sticky">
+    Produits
+  </md-subheader>
+  <md-list-item layout="row" >
+    <div ng-repeat="field in fields" flex={{field.width}}>
+      <p>{{field.name}}</p>
+    </div>
+  </md-list-item>
+  <md-list-item layout="row" ng-repeat="product in products" ng-click="goToProduct(product, $event)">
+    <img flex={{fields[0].width}} ng-src="{{product.img}}" alt="{{product.name}}">
+    <div flex={{fields[1].width}}>
+      <p>{{product.name}}</p>
+    </div>
+    <div flex={{fields[2].width}}>
+      <p>{{product.ref}}</p>
+    </div>
+    <div flex={{fields[3].width}}>
+      <p>{{product.sex}}</p>
+    </div>
+    <div flex={{fields[4].width}}>
+      <p>{{product.category}}</p>
+    </div>
+    <div flex={{fields[5].width}}>
+      <p>{{product.brand}}</p>
+    </div>
+    <div flex={{fields[6].width}}>
+      <p>{{product.price}}€</p>
+    </div>
+    <div flex={{fields[7].width}}>
+      <p>{{product.details}}</p>
+    </div>
+  </md-list-item>
+</md-list>
+<div hide-gt-sm layout="row" layout-align="center center" flex>
+  <md-checkbox ng-model="fullscreen" aria-label="Fullscreen Product Dialog"></md-checkbox>
+</div>
