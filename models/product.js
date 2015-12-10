@@ -3,12 +3,15 @@ var Schema       = mongoose.Schema;
 
 var productSchema = mongoose.Schema({
 	ref:  String,
-    name: String,
-  	info: String
+    catégorie: String,
+    marque: String,
+    nom: String,
+    prix: String,
+    url: String,
+  	comment: String
 });
 
 //    brand: [{ brand: Schema.Brand.ObjectId, ref: 'Brand'}]
-
 
 // on every save, add the date
 productSchema.pre('save', function(next) {
