@@ -23,10 +23,10 @@ app.config(function ($stateProvider, $urlRouterProvider, $mdIconProvider, $mdThe
         })
         .state('home.myshop', {
             url: '/myshop',
-            templateUrl: 'views/products.html',
+            templateUrl: 'views/myshop.html',
             controller: 'MyShopCtrl'
         });
-    $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/myshop');
 
 
     $mdIconProvider

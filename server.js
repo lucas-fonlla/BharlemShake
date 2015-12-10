@@ -54,13 +54,37 @@ router.route("/users")
     });
 
 router.route("/user/addProduct")
-    .post(function(req, res)
-    {
-       User.update({_id : req._id}, {"$push" : {product : req.product}}, function (err, raw)
-        {
-            if (err)
+    .post(function (req, res) {
+        console.log(req.body._id, req.body.product);
+        User.findOne({_id: req.body._id}, function (err, doc) {
+            doc.products.push(req.body.product);
+            doc.save(function (err) {
+                if (err)
+                    res.send(err);
+                res.json(doc);
+            });
+        });
+    });
+
+router.route("/user/removeProduct")
+    .post(function (req, res) {
+        User.findOne({_id: req.body._id}, function (err, doc) {
+            doc.products.remove(req.body.product);
+            doc.save(function (err) {
+                if (err)
+                    res.send(err);
+                res.json(doc);
+            });
+        });
+    });
+
+router.route("/user/products")
+    .post(function (req, res) {
+        User.findOne({username: req.body.username, password: req.body.password}).populate("products").exec(function (err, user) {
+            if (err) {
                 res.send(err);
-            console.log('The raw response from Mongo was ', raw);
+            }
+            res.json(user.products);
         });
     });
 
@@ -136,29 +160,23 @@ router.route("/products")
 //});
 
 //parse csv
-var fileStream      = fs.createReadStream("products.csv", {encoding: 'utf-8'});
-app.get('/csv', function (req, res)
-    {
+var fileStream = fs.createReadStream("products.csv", {encoding: 'utf-8'});
+app.get('/csv', function (req, res) {
 
-        csv.fromStream(fileStream, {
-            headers: ['ref','catégorie','marque','nom','prix','url','comment'],
-            delimiter: ';'
-            //encoding: 'utf-8'
-        })
-
-        .on("data", function (data)
-        {
+    csv.fromStream(fileStream, {
+        headers: ['ref', 'category', 'brand', 'name', 'price', 'img', 'details'],
+        delimiter: ';'
+    })
+        .on("data", function (data) {
             console.error("data", data);
             var product = new Product();
+            product.name = data.name;
+            product.category = data.category;
+            product.img = data.img;
+            product.brand = data.brand;
             product.ref = data.ref;
-            product.catégorie = data.catégorie;
-            product.marque = data.marque;
-            product.marque = data.marque;
-            product.nom = data.nom;
-            product.nom = data.nom;
-            product.prix = data.prix;
-            product.url = data.url;
-            product.comment = data.comment;
+            product.price = data.price;
+            product.details = data.details;
             product.save(function (err) {
                 if (err)
                     res.send(err);
@@ -166,11 +184,10 @@ app.get('/csv', function (req, res)
             });
         })
 
-        .on("end", function ()
-        {
+        .on("end", function () {
             console.log("ok");
         })
-    });
+});
 
 
 app.get('/', function (req, res) {

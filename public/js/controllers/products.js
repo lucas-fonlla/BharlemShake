@@ -1,26 +1,19 @@
-app.controller('ProductListCtrl', function ($scope, $mdDialog, $mdMedia, ProductsFactory) {
+app.controller('ProductListCtrl', function ($scope, $mdDialog, $mdMedia, ProductsFactory, UserFactory) {
 
-    $scope.emptyList = "Aucun produits";
+    UserFactory.getUser("paul", "pass").then(function(result)
+    {
+        console.log(result);
+    });
+    $scope.products = [];
+    $scope.emptyList = "Aucun produit";
     ProductsFactory.getProducts().then(function (result) {
-        $scope.products = [];
-        for (item in result) {
-            var product = result[item];
-            product.sex = '-';
-            product.name = result[item].nom;
-            product.category = result[item]["catégorie"];
-            product.img = result[item].url;
-            product.brand = result[item].marque;
-            product.price = result[item].prix;
-            product.details = result[item].comment;
-            $scope.products.push(product);
-        }
+        $scope.products = result;
     });
     $scope.fields = [
         {name: 'Visuel', width: '10'},
         {name: 'Nom', width: '10'},
         {name: 'Ref', width: '5'},
-        {name: 'Sexe', width: '10'},
-        {name: 'CatÃ©gorie', width: '15'},
+        {name: 'Catégorie', width: '15'},
         {name: 'Marque', width: '15'},
         {name: 'Prix', width: '5'},
         {name: 'Description', width: '30'}
@@ -45,6 +38,11 @@ app.controller('ProductListCtrl', function ($scope, $mdDialog, $mdMedia, Product
             return $mdMedia('sm');
         }, function (sm) {
             $scope.fullscreen = (sm === true);
+        });
+    };
+    $scope.addProduct = function (product) {
+        UserFactory.addProduct(product).then(function (result) {
+            console.log("Product added !");
         });
     };
 });
