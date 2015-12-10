@@ -18,7 +18,7 @@ app.controller("MainCtrl", function($scope,  $mdSidenav, $mdBottomSheet, $log, $
         }
     ];
 
-    function toggleItemsList() {
+    $scope.toggleItemsList = function() {
         var pending = $mdBottomSheet.hide() || $q.when(true);
 
         pending.then(function(){

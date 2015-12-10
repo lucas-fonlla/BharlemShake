@@ -7,21 +7,16 @@
         </md-button>
     </md-toolbar>
     <md-button ng-repeat-start="item in menuItems" layout="column" layout-align="center center"
-               flex class="capitalize" ng-click="vm.selectItem(item)"
+               flex class="capitalize" ng-click="vm.selectItem(item)" style="max-height:80px;"
                ui-sref-active="md-warn" ui-sref="{{item.sref}}">
         <div hide-sm hide-md class="md-tile-content">
             <i class="material-icons md-36">{{item.icon}}</i>
         </div>
         <div class="md-tile-content">
             {{item.name}}
-        </div>
+            </div>
     </md-button>
     <md-divider ng-repeat-end></md-divider>
-    <md-button hide-gt-md flex ng-click="vm.showActions($event)">
-        <div layout="row" class="md-tile-content">
-            Actions
-        </div>
-    </md-button>
 </md-sidenav>
 
 <div layout="column" flex>
