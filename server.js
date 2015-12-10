@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var csv = require('fast-csv');
 var port = process.env.PORT || 2096;
 var app = express();
+var fs = require('fs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -122,6 +123,44 @@ router.route("/products")
     //{
     //    console.log(data);
     //});
+
+//parse csv
+var fileStream      = fs.createReadStream("products.csv", {encoding: 'utf-8'});
+app.get('/csv', function (req, res)
+    {
+
+        csv.fromStream(fileStream, {
+            headers: ['ref','catégorie','marque','nom','prix','url','comment'],
+            delimiter: ';'
+            //encoding: 'utf-8'
+        })
+
+        .on("data", function (data)
+        {
+            console.error("data", data);
+            var product = new Product();
+            product.ref = data.ref;
+            product.catégorie = data.catégorie;
+            product.marque = data.marque;
+            product.marque = data.marque;
+            product.nom = data.nom;
+            product.nom = data.nom;
+            product.prix = data.prix;
+            product.url = data.url;
+            product.comment = data.comment;
+            product.save(function (err) {
+                if (err)
+                    res.send(err);
+                res.json({message: "Product added !"});
+            });
+        })
+
+        .on("end", function ()
+        {
+            console.log("ok");
+        })
+    });
+
 
 app.get('/', function (req, res) {
     res.send("Salut");

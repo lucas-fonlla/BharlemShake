@@ -239,6 +239,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "models/user.js",
+			"settings":
+			{
+				"buffer_size": 590,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 3257,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "models/product.js",
+			"settings":
+			{
+				"buffer_size": 651,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -306,10 +330,18 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Lucas/workspace/BharlennShake"
+		"/C/Users/Lucas/workspace/BharlennShake",
+		"/C/Users/Lucas/workspace/BharlennShake/models"
 	],
 	"file_history":
 	[
+		"/C/Users/Lucas/workspace/BharlennShake/server.js",
+		"/C/Users/Lucas/workspace/BharlennShake/models/user.js",
+		"/C/Users/Lucas/workspace/BharlennShake/index.html",
+		"/C/Users/Lucas/workspace/BharlennShake/controllers/auth.js",
+		"/C/Users/Lucas/workspace/BharlennShake/main.js",
+		"/C/Users/Lucas/workspace/BharlennShake/models/validations.js",
+		"/C/Users/Lucas/workspace/BharlennShake/package.json",
 		"/C/Users/Lucas/workspace/BNP/fonlla_l/pages/modalLogin.html",
 		"/C/Users/Lucas/workspace/BNP/fonlla_l/style.css",
 		"/C/Users/Lucas/workspace/BNP/fonlla_l/controller/connexion.js",
@@ -430,14 +462,7 @@
 		"/C/Users/Lucas/Desktop/dev Node/One-page app/server.js",
 		"/C/Users/Lucas/Desktop/dev Node/site_test/demo-express/app.js",
 		"/C/Users/Lucas/Desktop/dev Node/site_test/app.js",
-		"/C/Users/Lucas/Desktop/dev Node.js/serveur.js",
-		"/C/Users/Lucas/Desktop/dev Node.js/views/todo.ejs",
-		"/C/Users/Lucas/Desktop/dev Node.js/test.js",
-		"/C/Users/Lucas/Desktop/dev Node.js/views/accueil.ejs",
-		"/C/Users/Lucas/Desktop/dev Node.js/monmodule.js",
-		"/C/Users/Lucas/Desktop/dev Node.js/app.js",
-		"/C/Users/Lucas/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/Lucas/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript.sublime-settings"
+		"/C/Users/Lucas/Desktop/dev Node.js/serveur.js"
 	],
 	"find":
 	{
@@ -481,8 +506,97 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "models/user.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								173,
+								173
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3257,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2746,
+								2746
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1320.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "models/product.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 651,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								651,
+								651
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
