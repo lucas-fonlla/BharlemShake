@@ -20,6 +20,11 @@ app.config(function ($stateProvider, $urlRouterProvider, $mdIconProvider, $mdThe
             url: '/products',
             templateUrl: 'views/products.html',
             controller: 'ProductListCtrl'
+        })
+        .state('home.myshop', {
+            url: '/myshop',
+            templateUrl: 'views/products.html',
+            controller: 'MyShopCtrl'
         });
     $urlRouterProvider.otherwise('/dashboard');
 
@@ -53,7 +58,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $mdIconProvider, $mdThe
         });
 
     $mdThemingProvider.definePalette('defaultPrimary', {
-        '50':  '#FFFFFF',
+        '50': '#FFFFFF',
         '100': 'rgb(255, 198, 197)',
         '200': '#E75753',
         '300': '#E75753',
@@ -69,3 +74,5 @@ app.config(function ($stateProvider, $urlRouterProvider, $mdIconProvider, $mdThe
         'A700': '#E75753'
     });
 });
+
+app.server = "http://localhost:2096";

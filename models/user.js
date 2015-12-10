@@ -1,11 +1,12 @@
 var mongoose     = require('mongoose');
 var Schema       = mongoose.Schema;
+var Product = require('./product');
 
 var userSchema = mongoose.Schema({
     username: String,
     password: String,
-    token: String
-
+    token: String,
+    products : [Product]
 });
 
 // on every save, add the date

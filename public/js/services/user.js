@@ -1,0 +1,53 @@
+app.factory('UserFactory', ['$http', '$q', function ($http, $q) {
+    var factory = {
+        user: false,
+        getUser: function (username, password) {
+            var deferred = $q.defer();
+            $http({
+                method: 'POST',
+                url: app.server + '/api/authenticate',
+                data: {username: username, password: password},
+                headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj) {
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    }
+                    console.log(str);
+                    return str.join("&");
+                }
+            }).then(function successCallback(response) {
+                factory.user = response;
+                deferred.resolve(factory.user);
+            }, function errorCallback(response) {
+                console.log(response);
+                deferred.reject("Error get user");
+            });
+            return deferred.promise;
+        },
+        addProduct : function(product)
+        {
+            var deferred = $q.defer();
+            $http({
+                method: 'POST',
+                url: app.server + '/api/user/',
+                data: {username : "Carl", product : product},
+                headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj) {
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    }
+                    console.log(str);
+                    return str.join("&");
+                }
+            }).then(function successCallback(response) {
+                deferred.resolve("Product added");
+            }, function errorCallback(response) {
+                deferred.reject("Error set Product");
+            });
+            return deferred.promise;
+        }
+    };
+    return factory;
+}]);

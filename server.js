@@ -52,8 +52,19 @@ router.route("/users")
         });
     });
 
+router.route("/user/addProduct")
+    .post(function(req, res)
+    {
+       User.update({_id : req._id}, {"$push" : {product : req.product}}, function (err, raw)
+        {
+            if (err)
+                res.send(err);
+            console.log('The raw response from Mongo was ', raw);
+        });
+    });
+
 //auth
-app.post('/authenticate', function (req, res) {
+router.route('/authenticate').post(function (req, res) {
     User.findOne({username: req.body.username, password: req.body.password}, function (err, user) {
         if (err) {
             res.json({
@@ -116,12 +127,12 @@ router.route("/products")
 
 // Start server
 
-    //csv.fromPath("products.csv", {headers: true}).on("data", function (data) {
-    //    console.log(data);
-    //}).on("error", function(data)
-    //{
-    //    console.log(data);
-    //});
+//csv.fromPath("products.csv", {headers: true}).on("data", function (data) {
+//    console.log(data);
+//}).on("error", function(data)
+//{
+//    console.log(data);
+//});
 
 app.get('/', function (req, res) {
     res.send("Salut");

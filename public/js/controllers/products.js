@@ -1,32 +1,26 @@
-app.controller('ProductListCtrl', function ($scope, $mdDialog, $mdMedia) {
-    $scope.products = [
-        {
-            name: 'Oxalis #1',
-            img: 'http://www.cae-store.com/wp-content/uploads/2015/06/Chemise-en-jean-devant-femme2-325x600.jpg',
-            ref: 'Cae1',
-            sex: 'Femme',
-            category: 'chemise',
-            brand: 'Cae',
-            price: 129.00,
-            details: 'Chemise coupe droite'
-        },
-        {
-            name: 'Oxalis #1',
-            img: 'http://www.cae-store.com/wp-content/uploads/2015/06/Chemise-en-jean-devant-femme2-325x600.jpg',
-            ref: 'Cae1',
-            sex: 'Femme',
-            category: 'chemise',
-            brand: 'Cae',
-            price: 129.00,
-            details: 'Chemise coupe droite'
+app.controller('ProductListCtrl', function ($scope, $mdDialog, $mdMedia, ProductsFactory) {
+
+    $scope.emptyList = "Aucun produits";
+    ProductsFactory.getProducts().then(function (result) {
+        $scope.products = [];
+        for (item in result) {
+            var product = result[item];
+            product.sex = '-';
+            product.name = result[item].nom;
+            product.category = result[item]["catégorie"];
+            product.img = result[item].url;
+            product.brand = result[item].marque;
+            product.price = result[item].prix;
+            product.details = result[item].comment;
+            $scope.products.push(product);
         }
-    ];
+    });
     $scope.fields = [
         {name: 'Visuel', width: '10'},
         {name: 'Nom', width: '10'},
         {name: 'Ref', width: '5'},
         {name: 'Sexe', width: '10'},
-        {name: 'Catégorie', width: '15'},
+        {name: 'CatÃ©gorie', width: '15'},
         {name: 'Marque', width: '15'},
         {name: 'Prix', width: '5'},
         {name: 'Description', width: '30'}

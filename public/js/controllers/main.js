@@ -15,6 +15,11 @@ app.controller("MainCtrl", function($scope,  $mdSidenav, $mdBottomSheet, $log, $
             name: 'Produits',
             icon: 'view_module',
             sref: '.products'
+        },
+        {
+            name: 'Mon shop',
+            icon: 'shopping_basket',
+            sref: '.myshop'
         }
     ];
 
