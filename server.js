@@ -1,15 +1,13 @@
 var mongoose = require('mongoose');
-var morgan = require("morgan");
 var express = require('express');
 var bodyParser = require('body-parser');
-var jwt = require("jsonwebtoken");
+var csv = require('fast-csv');
 var port = process.env.PORT || 2096;
 var app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(morgan("dev"));
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
@@ -46,7 +44,7 @@ router.route("/users")
         });
     })
     .get(function (req, res) {
-       User.find(function (err, users) {
+        User.find(function (err, users) {
             if (err)
                 res.send(err);
 
@@ -55,8 +53,8 @@ router.route("/users")
     });
 
 //auth
-app.post('/authenticate', function(req, res) {
-    User.findOne({username: req.body.username, password: req.body.password}, function(err, user) {
+app.post('/authenticate', function (req, res) {
+    User.findOne({username: req.body.username, password: req.body.password}, function (err, user) {
         if (err) {
             res.json({
                 type: false,
@@ -64,16 +62,16 @@ app.post('/authenticate', function(req, res) {
             });
         } else {
             if (user) {
-               res.json({
+                res.json({
                     type: true,
                     data: user,
                     token: user.token
-                }); 
+                });
             } else {
                 res.json({
                     type: false,
                     data: "Incorrect username/password"
-                });    
+                });
             }
         }
     });
@@ -82,11 +80,9 @@ app.post('/authenticate', function(req, res) {
 //products
 router.route("/products/:product_id")
 
-    .get(function (req, res)
-    {
+    .get(function (req, res) {
         var id = req.params.product_id;
-        Product.findById(id, function(err, product)
-        {
+        Product.findById(id, function (err, product) {
             if (err)
                 res.send(err);
             res.json(product);
@@ -94,8 +90,7 @@ router.route("/products/:product_id")
     });
 
 router.route("/products")
-    .post(function(req, res)
-    {
+    .post(function (req, res) {
         var ref = req.body.ref;
         var name = req.body.name;
         var info = req.body.info;
@@ -103,16 +98,15 @@ router.route("/products")
         product.ref = ref;
         product.name = name;
         product.info = info;
-        product.save(function(err)
-        {
+        product.save(function (err) {
             if (err)
                 res.send(err);
-            res.json({message : "Product created !"});
+            res.json({message: "Product created !"});
         });
     })
 
     .get(function (req, res) {
-       Product.find(function (err, products) {
+        Product.find(function (err, products) {
             if (err)
                 res.send(err);
 
@@ -121,6 +115,13 @@ router.route("/products")
     });
 
 // Start server
+
+    //csv.fromPath("products.csv", {headers: true}).on("data", function (data) {
+    //    console.log(data);
+    //}).on("error", function(data)
+    //{
+    //    console.log(data);
+    //});
 
 app.get('/', function (req, res) {
     res.send("Salut");

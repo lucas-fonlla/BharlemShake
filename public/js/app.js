@@ -21,7 +21,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $mdIconProvider, $mdThe
             templateUrl: 'views/products.html',
             controller: 'ProductListCtrl'
         });
-    $urlRouterProvider.otherwise('/products');
+    $urlRouterProvider.otherwise('/dashboard');
 
 
     $mdIconProvider
@@ -32,10 +32,10 @@ app.config(function ($stateProvider, $urlRouterProvider, $mdIconProvider, $mdThe
 
     $mdThemingProvider
         .theme('default')
-        .primaryPalette('grey', {
+        .primaryPalette('blue', {
             'default': '600'
         })
-        .accentPalette('red', {
+        .accentPalette('teal', {
             'default': '500'
         })
         .warnPalette('defaultPrimary');
