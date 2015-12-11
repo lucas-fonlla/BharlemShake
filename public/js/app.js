@@ -26,7 +26,8 @@ app.config(function ($stateProvider, $urlRouterProvider, $mdIconProvider, $mdThe
             templateUrl: 'views/myshop.html',
             controller: 'MyShopCtrl'
         });
-    $urlRouterProvider.otherwise('/myshop');
+    $urlRouterProvider.when('', '/ok')
+        .otherwise('/dashboard');
 
 
     $mdIconProvider
