@@ -21,10 +21,11 @@ app.controller("MyShopCtrl", function($scope, UserFactory)
         {name: 'Prix', width: '5'},
         {name: 'Description', width: '30'}
     ];
-    $scope.removeProduct = function(product)
+    $scope.removeProduct = function(product, index)
     {
-        UserFactory.removeProduct(product).then(function (result) {
-            console.log("Product removed !");
+        UserFactory.removeProduct(product, $scope.user).then(function (result) {
+            $scope.products.splice(index, 1);
+            console.log("Product removed !");   
         });
     }
 });

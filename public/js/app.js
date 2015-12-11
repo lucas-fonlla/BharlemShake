@@ -75,4 +75,5 @@ app.config(function ($stateProvider, $urlRouterProvider, $mdIconProvider, $mdThe
     });
 });
 
+
 app.server = "http://localhost:2096";

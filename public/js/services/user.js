@@ -18,7 +18,9 @@ app.factory('UserFactory', ['$http', '$q', function ($http, $q) {
                 }
             }).then(function successCallback(response) {
                 console.log("Get User > ", response);
-                factory.user = response.data.data;
+                var user = {};
+                user._id = response.data.data._id;
+                factory.user = user;
                 deferred.resolve(factory.user);
             }, function errorCallback(response) {
                 console.log(response);
@@ -38,7 +40,7 @@ app.factory('UserFactory', ['$http', '$q', function ($http, $q) {
                     for (var p in obj) {
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     }
-                    console.log(str);
+                    console.log("str",str);
                     return str.join("&");
                 }
             }).then(function successCallback(response) {
@@ -68,13 +70,14 @@ app.factory('UserFactory', ['$http', '$q', function ($http, $q) {
             });
             return deferred.promise;
         },
-        removeProduct : function(product)
+        removeProduct : function(product, user)
         {
+            console.log("user", user);
             var deferred = $q.defer();
             $http({
                 method: 'POST',
                 url: app.server + '/api/user/removeProduct',
-                data: {_id : this.user._id, product : product._id},
+                data: {_id : user._id, product : product._id},
                 dataType : 'json',
                 headers: {
                     "Content-Type": "application/json"

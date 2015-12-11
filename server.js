@@ -68,7 +68,11 @@ router.route("/user/addProduct")
 
 router.route("/user/removeProduct")
     .post(function (req, res) {
+        console.log("body", req.body);
         User.findOne({_id: req.body._id}, function (err, doc) {
+            if (err)
+                res.send(err);  
+            console.log("req", req.body);
             doc.products.remove(req.body.product);
             doc.save(function (err) {
                 if (err)

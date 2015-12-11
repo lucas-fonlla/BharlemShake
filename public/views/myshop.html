@@ -18,7 +18,7 @@
             <td data-title="{{fields[5].name}}">{{product.price}}</td>
             <td data-title="{{fields[6].name}}">{{product.details}}</td>
             <td>
-                <md-button class="md-fab md-accent" aria-label="FAB" ng-click="removeProduct(product)">
+                <md-button class="md-fab md-accent" aria-label="FAB" ng-click="removeProduct(product, $index)">
                     <md-icon class="material-icons">remove</md-icon>
                 </md-button>
             </td>
