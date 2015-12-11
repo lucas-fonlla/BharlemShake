@@ -25,9 +25,12 @@ app.config(function ($stateProvider, $urlRouterProvider, $mdIconProvider, $mdThe
             url: '/myshop',
             templateUrl: 'views/myshop.html',
             controller: 'MyShopCtrl'
+        })
+        .state('home.login', {
+            url: '/login',
+            templateUrl: 'views/login.html'
         });
-    $urlRouterProvider.when('', '/ok')
-        .otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/dashboard');
 
 
     $mdIconProvider

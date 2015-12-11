@@ -1,4 +1,4 @@
-app.controller("MyShopCtrl", function($scope, UserFactory)
+app.controller("MyShopCtrl", function($scope, UserFactory, $mdDialog, $mdMedia)
 {
     $scope.products = [];
     $scope.emptyList = "Mon shop est vide";
@@ -28,4 +28,27 @@ app.controller("MyShopCtrl", function($scope, UserFactory)
             console.log("Product removed !");   
         });
     }
+
+    $scope.goToProduct = function (product, event) {
+        $scope.product = product;
+        $mdDialog.show({
+            controller: ProductCtrl,
+            templateUrl: 'views/preview_product.html',
+            parent: angular.element(document.body),
+            targetEvent: event,
+            scope: $scope.$new(),
+            clickOutsideToClose: true,
+            fullscreen: $mdMedia('sm') && $scope.fullscreen
+        })
+            .then(function (answer) {
+                $scope.status = 'You said the information was "' + answer + '".';
+            }, function () {
+                $scope.status = 'You cancelled the dialog.';
+            });
+        $scope.$watch(function () {
+            return $mdMedia('sm');
+        }, function (sm) {
+            $scope.fullscreen = (sm === true);
+        });
+    };
 });
