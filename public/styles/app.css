@@ -100,6 +100,12 @@ md-sidenav.md-locked-open.md-sidenav-left {
     max-width: 110px;
 }
 
+md-sidenav.md-locked-open.md-sidenav-right {
+    width: 75%;
+    min-width: 75%;
+    max-width: 75%;
+}
+
 a.md-button.md-warn.md-raised, a.md-button.md-warn.md-fab, .md-button.md-warn.md-raised, .md-button.md-warn.md-fab {
     color: white;
 }
