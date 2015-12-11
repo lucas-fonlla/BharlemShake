@@ -1,5 +1,5 @@
-<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-md')" md-component-id="right" style="width:auto;">
+<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-md')" md-component-id="right">
  	<div  ng-controller="DashboardCtrl" layout="row">
- 		<div  flex="33" ng-repeat="(title, content) in messages" ng-include src="'views/partials/messages.html'" style="height:500px;"/>
+ 		<div ng-repeat="(title, content) in messages" ng-include src="'views/partials/messages.html'" style="height:300px;"/>
 	</div>
 </md-sidenav>
