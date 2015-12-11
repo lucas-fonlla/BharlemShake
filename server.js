@@ -5,6 +5,7 @@ var csv = require('fast-csv');
 var port = process.env.PORT || 2096;
 var app = express();
 var fs = require('fs');
+var path = require('path');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -195,10 +196,11 @@ app.get('/csv', function (req, res) {
 
 
 app.get('/', function (req, res) {
-    res.send("Salut");
+    res.sendFile(path.join(__dirname + "/public/index.html"));
 });
 
 app.use("/api", router);
+app.use(express.static('public'));
 
 app.listen(port);
 
