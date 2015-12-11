@@ -12,6 +12,7 @@
     },
     templateUrl: 'views/messages.html',
     link : function(scope, element, attrs) {
+      console.log(scope);
     }
   };
 }

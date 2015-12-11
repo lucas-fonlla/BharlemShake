@@ -1,31 +1,26 @@
-<div class="table-responsive-vertical md-whiteframe-z1" ng-show="products.length != 0">
-    <table id="table" class="table table-hover table-bordered">
-        <thead>
-        <tr>
-            <th ng-repeat="field in fields">{{field.name}}</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="product in products">
-            <td data-title="{{fields[0].name}}"><img class="image-td" id="{{product.ref}}" ng-src="{{product.img}}"
-                                                     alt="{{product.name}}" ng-click="goToProduct(product, $event)">
-            </td>
-            <td data-title="{{fields[1].name}}">{{product.name}}</td>
-            <td data-title="{{fields[2].name}}">{{product.ref}}</td>
-            <td data-title="{{fields[3].name}}">{{product.category}}</td>
-            <td data-title="{{fields[4].name}}">{{product.brand}}</td>
-            <td data-title="{{fields[5].name}}">{{product.price}}</td>
-            <td data-title="{{fields[6].name}}">{{product.details}}</td>
-            <td>
-                <md-button class="md-fab md-accent" aria-label="FAB" ng-click="addProduct(product)">
-                    <md-icon class="material-icons">add</md-icon>
-                </md-button>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+<div class="table-responsive-vertical md-whiteframe-z1" ng-controller="ProductListCtrl" >
+  <table id="table" class="table table-hover table-bordered">
+    <thead>
+    <tr>
+      <th ng-repeat="field in fields">{{field.name}}</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="product in products">
+      <td data-title="{{fields[0].name}}" ><img class="image-td" id="{{product.ref}}" ng-src="{{product.img}}" alt="{{product.name}}" ng-click="goToProduct(product, $event)"></td>
+      <td data-title="{{fields[1].name}}">{{product.name}}</td>
+      <td data-title="{{fields[2].name}}">{{product.ref}}</td>
+      <td data-title="{{fields[3].name}}">{{product.sex}}</td>
+      <td data-title="{{fields[4].name}}">{{product.category}}</td>
+      <td data-title="{{fields[5].name}}">{{product.brand}}</td>
+      <td data-title="{{fields[6].name}}">{{product.price}}</td>
+      <td data-title="{{fields[7].name}}">{{product.details}}</td>
+      <td><md-button class="md-fab md-accent" aria-label="FAB"><md-icon class="material-icons">add</md-icon></md-button></td>
+    </tr>
+    </tbody>
+  </table>
 </div>
-<div ng-show="products.length == 0">
-    {{emptyList}}
+<div hide-gt-sm layout="row" layout-align="center center" flex>
+<md-checkbox ng-model="fullscreen" aria-label="Fullscreen Product Dialog"></md-checkbox>
 </div>
