@@ -26,7 +26,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $mdIconProvider, $mdThe
             templateUrl: 'views/myshop.html',
             controller: 'MyShopCtrl'
         });
-    $urlRouterProvider.otherwise('/myshop');
+    $urlRouterProvider.otherwise('/dashboard');
 
 
     $mdIconProvider
@@ -73,6 +73,18 @@ app.config(function ($stateProvider, $urlRouterProvider, $mdIconProvider, $mdThe
         'A400': '#E75753',
         'A700': '#E75753'
     });
+});
+
+app.run(function ($rootScope, $location, $state) {
+    $rootScope.$on("$stateChangeStart",
+        function (event, toState, toParams, fromState, fromParams) {
+            if (fromState.name && fromState.name == login && window.sessionStorage.token == false)
+            {
+                event.preventDefault();
+                $state.transitionTo('home.login')
+            }
+        });
+    $rootScope.$on("$stateChangeError", console.log.bind(console));
 });
 
 
