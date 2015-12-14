@@ -6,13 +6,7 @@ angular.module('app')
 
 function messagesService($q){
   var messages = {
-    'news': [
-      {
-        logo: 'http://www.cae-store.com/wp-content/themes/cae/library/images/cae-logo.jpg',
-        subject: 'Collection Printemps-Ete',
-        userName: 'Cae',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida accumsan enim, sed lacinia ligula dignissim vitae. Sed at magna volutpat, pretium nunc non, tincidunt enim. Suspendisse quis iaculis tortor, sed lobortis metus. Aenean cras amet.'
-      },
+    'Nouveautés': [
       {
         logo: '',
         subject: 'Votre propre shop bientôt sur votre blog',
@@ -20,13 +14,7 @@ function messagesService($q){
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida accumsan enim, sed lacinia ligula dignissim vitae. Sed at magna volutpat, pretium nunc non, tincidunt enim. Suspendisse quis iaculis tortor, sed lobortis metus. Aenean cras amet.'
       },
     ],
-    'new_brands': [
-      {
-        logo: 'http://www.cae-store.com/wp-content/themes/cae/library/images/cae-logo.jpg',
-        subject: 'Cae',
-        userName: 'Justin BRISSET',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida accumsan enim, sed lacinia ligula dignissim vitae. Sed at magna volutpat, pretium nunc non, tincidunt enim. Suspendisse quis iaculis tortor, sed lobortis metus. Aenean cras amet.'
-      },
+    'Les nouvelles des marques': [
       {
         logo: 'https://wooop.fr/img/logo.jpg',
         subject: 'wooop',
@@ -46,13 +34,7 @@ function messagesService($q){
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida accumsan enim, sed lacinia ligula dignissim vitae. Sed at magna volutpat, pretium nunc non, tincidunt enim. Suspendisse quis iaculis tortor, sed lobortis metus. Aenean cras amet.'
       },
     ],
-    'new_products': [
-      {
-        logo: 'http://www.cae-store.com/wp-content/themes/cae/library/images/cae-logo.jpg',
-        subject: 'Oxalis #1',
-        userName: 'Cae',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida accumsan enim, sed lacinia ligula dignissim vitae. Sed at magna volutpat, pretium nunc non, tincidunt enim. Suspendisse quis iaculis tortor, sed lobortis metus. Aenean cras amet.'
-      },
+    'Les nouveaux produits': [
       {
         logo: 'https://wooop.fr/img/logo.jpg',
         subject: 'T-Shirt Dans le Pochon',

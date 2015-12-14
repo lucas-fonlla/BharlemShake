@@ -161,6 +161,7 @@ md-radio-button.md-accent.md-checked .md-label span {
 .image-td
 {
     max-height : 200px;
+    max-width : 130px;
 }
 
 .image-td:focus

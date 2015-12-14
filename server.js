@@ -18,7 +18,7 @@ app.use(function (req, res, next) {
 });
 
 
-mongoose.connect('mongodb://10.104.14.112/bharlennshake');
+mongoose.connect('mongodb://192.168.1.241/bharlennshake');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -204,7 +204,7 @@ router.route("/export")
                 WooCommerce.post("products", data, callback);
             }
         });
-
+        res.send("Import OK");
     });
 
 // Start server

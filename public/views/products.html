@@ -8,7 +8,7 @@
     </thead>
     <tbody>
     <tr ng-repeat="product in products">
-      <td data-title="{{fields[0].name}}" ><img class="image-td" id="{{product.ref}}" ng-src="{{product.img}}" alt="{{product.name}}" ng-click="goToProduct(product, $event)"></td>
+      <td data-title="{{fields[0].name}}" ><img class="image-td" id="{{product.ref}}" ng-src="{{product.img }}" err-src="http://www.krby-bef.cz/images/products/big/no-picture.jpg" alt="{{product.name}}" ng-click="goToProduct(product, $event)"></td>
       <td data-title="{{fields[1].name}}">{{product.name}}</td>
       <td data-title="{{fields[2].name}}">{{product.ref}}</td>
       <td data-title="{{fields[3].name}}">{{product.category}}</td>

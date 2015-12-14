@@ -1,15 +1,12 @@
-app.controller("MyShopCtrl", function($scope, UserFactory, $mdDialog, $mdMedia)
-{
+app.controller("MyShopCtrl", function ($scope, UserFactory, $mdDialog, $mdMedia, $mdToast, $http) {
     $scope.products = [];
     $scope.emptyList = "Mon shop est vide";
-    UserFactory.getUser("paul", "pass").then(function(result)
-    {
+    UserFactory.getUser("paul", "pass").then(function (result) {
         console.log("User > ", result);
         $scope.user = result;
     });
 
-    UserFactory.getUserProducts("paul", "pass").then(function(result)
-    {
+    UserFactory.getUserProducts("paul", "pass").then(function (result) {
         $scope.products = result;
     });
     $scope.fields = [
@@ -21,11 +18,10 @@ app.controller("MyShopCtrl", function($scope, UserFactory, $mdDialog, $mdMedia)
         {name: 'Prix', width: '5'},
         {name: 'Description', width: '30'}
     ];
-    $scope.removeProduct = function(product, index)
-    {
+    $scope.removeProduct = function (product, index) {
         UserFactory.removeProduct(product, $scope.user).then(function (result) {
             $scope.products.splice(index, 1);
-            console.log("Product removed !");   
+            console.log("Product removed !");
         });
     }
 
@@ -51,4 +47,15 @@ app.controller("MyShopCtrl", function($scope, UserFactory, $mdDialog, $mdMedia)
             $scope.fullscreen = (sm === true);
         });
     };
+    $scope.openToast = function () {
+        $http.get(app.server + "/api/export/")
+            .success(function(data, status) {
+                var toast = $mdToast.simple();
+                toast.content("Importation effectué");
+                toast.theme("coffe-toast");
+                toast.position("top right");
+                toast.hideDelay(3000);
+                $mdToast.show(toast);
+            });
+    }
 });
