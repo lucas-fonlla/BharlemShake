@@ -5,7 +5,8 @@ app.config(function ($stateProvider, $urlRouterProvider, $mdIconProvider, $mdThe
         .state('home', {
             url: '',
             templateUrl: 'views/main.html',
-            controller: 'MainCtrl'
+            controller: 'MainCtrl',
+            abstract: true
         })
         .state('home.dashboard', {
             url: '/dashboard',
