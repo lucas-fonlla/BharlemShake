@@ -6,6 +6,7 @@ var port = process.env.PORT || 2096;
 var app = express();
 var fs = require('fs');
 var path = require('path');
+var WooCommerceAPI = require('woocommerce-api');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -72,7 +73,7 @@ router.route("/user/removeProduct")
         console.log("body", req.body);
         User.findOne({_id: req.body._id}, function (err, doc) {
             if (err)
-                res.send(err);  
+                res.send(err);
             console.log("req", req.body);
             doc.products.remove(req.body.product);
             doc.save(function (err) {
@@ -85,7 +86,10 @@ router.route("/user/removeProduct")
 
 router.route("/user/products")
     .post(function (req, res) {
-        User.findOne({username: req.body.username, password: req.body.password}).populate("products").exec(function (err, user) {
+        User.findOne({
+            username: req.body.username,
+            password: req.body.password
+        }).populate("products").exec(function (err, user) {
             if (err) {
                 res.send(err);
             }
@@ -155,14 +159,55 @@ router.route("/products")
         });
     });
 
-// Start server
 
-//csv.fromPath("products.csv", {headers: true}).on("data", function (data) {
-//    console.log(data);
-//}).on("error", function(data)
-//{
-//    console.log(data);
-//});
+router.route("/export")
+    .get(function (req, res) {
+        var WooCommerce = new WooCommerceAPI({
+            url: 'http://localhost:2048/wordpress/',
+            consumerKey: 'ck_6babeda21673b117220436cf6301b6d79e12024c',
+            consumerSecret: 'cs_808da118cf5029be7e0e8161fd7a6c0425a98c0e',
+        });
+
+        User.findOne({
+            username: "paul",
+            password: "pass"
+        }).populate("products").exec(function (err, user) {
+            if (err) {
+                res.send(err);
+            }
+            var products = user.products;
+            for (var product in products)
+            {
+                var data = {
+                    "product": {
+                        "title": products[product].name,
+                        "type": "simple",
+                        "regular_price": products[product].price,
+                        "description": products[product].details,
+                        "short_description": products[product].details,
+                        "categories": [
+                            9,
+                            14
+                        ],
+                        "images": [
+                            {
+                                "src": products[product].img,
+                                "position": 0
+                            }
+
+                        ]
+                    }
+                };
+                var callback = function (err, data, res) {
+                    console.log(res);
+                };
+                WooCommerce.post("products", data, callback);
+            }
+        });
+
+    });
+
+// Start server
 
 //parse csv
 var fileStream = fs.createReadStream("products.csv", {encoding: 'utf-8'});

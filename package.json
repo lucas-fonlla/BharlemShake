@@ -23,6 +23,7 @@
     "fast-csv": "0.6.0",
     "jsonwebtoken": "^5.4.1",
     "mongoose": "4.2.9",
-    "morgan": "^1.6.1"
+    "morgan": "^1.6.1",
+    "woocommerce-api": "1.0.4"
   }
 }
